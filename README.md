@@ -2,6 +2,7 @@
 
 ## Installing Python (Along with Python 'pip' is also installed which helps to install other supportin packages while working with Python/Playwright)
 Windows : https://www.python.org/downloads/windows/
+
 MAC : https://www.python.org/downloads/macos/
 
 ## Installing Pytest:
