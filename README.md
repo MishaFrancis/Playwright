@@ -1,4 +1,4 @@
-### Playwright - Introduction to install
+# Playwright - Introduction to install
 
 ## Installing Python (Along with Python 'pip' is also installed which helps to install other supportin packages while working with Python/Playwright)
 Windows : https://www.python.org/downloads/windows/
@@ -16,7 +16,7 @@ playwright install
 ## To update Playwright to the latest version:
 pip install pytest-playwright playwright -U
 
-### Playwright - How to run tests
+# Playwright - How to run tests
 
 ## Run Pytest:
 pytest --headed
