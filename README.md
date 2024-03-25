@@ -1,3 +1,5 @@
+[![Playwright Tests](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml)
+
 # Playwright - Introduction to install
 
 ## Installing Python (Along with Python, 'pip' is also installed which helps to install other supporting packages while working with Python/Playwright)
