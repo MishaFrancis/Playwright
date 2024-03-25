@@ -27,5 +27,6 @@ jobs:
       - name: Run your tests
         run: |
           pytest test_example.py -v
+          pytest test_sample.py -v
         env:
           HOME: /root
