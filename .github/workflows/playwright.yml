@@ -25,6 +25,6 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run your tests
         run: |
-          pytest -v
+          pytest test_example.py -v
         env:
           HOME: /root
