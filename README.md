@@ -1,4 +1,6 @@
-[![My Playwright Tests](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml)
+# 🎭 [Playwright](https://playwright.dev) for Python [![PyPI version](https://badge.fury.io/py/playwright.svg)](https://pypi.python.org/pypi/playwright/)
+
+# [![My Playwright Tests](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml)
 
 # Playwright - Introduction to install
 
