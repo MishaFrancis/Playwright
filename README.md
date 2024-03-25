@@ -31,3 +31,6 @@ pytest test_login.py
 
 ## Run specific tests with html reports:
 pytest test_login.py --html=reports.html
+
+## Run tests in parallel
+pytest test_example.py -v --html=reports.html --disable-warnings --numprocesses 6
