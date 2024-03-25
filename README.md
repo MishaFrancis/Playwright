@@ -1,4 +1,4 @@
-[![Playwright Tests](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml)
+[![My Playwright Tests](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/MishaFrancis/Playwright/actions/workflows/playwright.yml)
 
 # Playwright - Introduction to install
 
