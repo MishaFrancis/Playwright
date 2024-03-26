@@ -1,17 +1,19 @@
-name: 'Yamllint GitHub Actions'
+name: Super-Linter
+
 on:
-  - push
+  push
+
 jobs:
-  yamllint:
-    name: 'Yamllint'
+  Super-lint:
+    name: Lint code base
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@master
-      - name: 'Yamllint'
-        uses: karancode/yamllint-github-action@master
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v3
         with:
-          yamllint_file_or_dir: 'test_example.py'
           yamllint_strict: false
           yamllint_comment: true
         env:
