@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build_3-12:
 
     runs-on: ${{ matrix.os }}
     strategy:
@@ -42,8 +42,8 @@ jobs:
       run: |
         pytest test_example.py -v
 
-  builds:
-
+  build_3-10:
+    needs: build_3-12
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
