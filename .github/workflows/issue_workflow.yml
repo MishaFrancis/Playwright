@@ -1,4 +1,4 @@
-name: Comment when opened
+name: Run the workflow when a issue is opened
 on:
   issues:
     types:
