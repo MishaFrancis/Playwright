@@ -1,4 +1,4 @@
-name: Auto Comment
+name: Auto Comment in issues
 on: [issues, pull_request]
 jobs:
   run:
