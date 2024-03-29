@@ -1,4 +1,5 @@
-import re 
+import re
+import pytest
 from playwright.sync_api import Page, expect, Playwright, sync_playwright
 
 def test_has_title(page: Page):
@@ -23,6 +24,7 @@ def test_get_started_link(page: Page):
 def test_get_started_print():
     print("Get started")
 
+@pytest.mark.smoke
 def test_fedex_home_page_links(page: Page):
 
     page.goto("https://www.fedex.com/en-nl/home.html")
@@ -33,10 +35,22 @@ def test_fedex_home_page_links(page: Page):
     expect(page).to_have_url('https://www.fedex.com/en-nl/home.html')
     print("URL:"+page.url)
 
-    # Expect below links
+    # For cookie pop-up
+    page.get_by_role("button", name="REJECT ALL COOKIES").click
+
+    # Expect below links on home page
+    expect(page.get_by_label("FedEx Netherlands Homepage", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Shipping", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Tracking", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Support", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Account", exact=True)).to_be_visible
+    expect(page.get_by_role("link", name="Sign in to Fedex.com", exact=True)).to_be_visible
     print("All header navigation links are visible on "+ page.url)
+
+    # Tracking section
+    expect(page.get_by_text("trackingnumber", exact=True)).to_be_visible
+    expect(page.get_by_label("Click your to track your package", exact=True)).to_be_visible
+    expect(page.get_by_label("Multiple Tracking Numbers", exact=True)).to_be_visible
+    print("***End***")
+    page.wait_for_timeout(5000)
     page.close()
