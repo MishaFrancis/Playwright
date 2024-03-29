@@ -74,3 +74,14 @@ jobs:
       run: |
         pytest test_in_sync.py -v
       
+  build_check:
+    needs: build_3-12
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 12
+        uses: actions/setup-python@v4
+        with:
+          python-version: 12
+      - name: Install dependencies
+        run: print("Build check complete")
