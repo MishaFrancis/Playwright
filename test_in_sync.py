@@ -1,6 +1,5 @@
-import re
-from turtle import delay 
-from playwright.sync_api import Page, expect
+import re 
+from playwright.sync_api import Page, expect, Playwright, sync_playwright
 
 def test_has_title(page: Page):
     
@@ -27,12 +26,17 @@ def test_get_started_print():
 def test_fedex_home_page_links(page: Page):
 
     page.goto("https://www.fedex.com/en-nl/home.html")
-    
     # Expect a title
     expect(page).to_have_title(re.compile("FedEx | Express Delivery, Courier & Shipping Services | Netherlands"))
     
     # Expect below url
     expect(page).to_have_url('https://www.fedex.com/en-nl/home.html')
-    print(page.url)
+    print("URL:"+page.url)
 
+    # Expect below links
+    expect(page.get_by_role("link", name="Shipping", exact=True)).to_be_visible
+    expect(page.get_by_role("link", name="Tracking", exact=True)).to_be_visible
+    expect(page.get_by_role("link", name="Support", exact=True)).to_be_visible
+    expect(page.get_by_role("link", name="Account", exact=True)).to_be_visible
+    print("All header navigation links are visible on "+ page.url)
     page.close()
