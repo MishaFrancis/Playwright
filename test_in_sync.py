@@ -61,7 +61,7 @@ def test_fedex_home_page_link(page: Page):
 
     page.goto("https://www.fedex.com/en-nl/home.html")
     # Expect a title
-    
+    page.wait_for_timeout(5000)
     print(page.title())
-    expect(page).to_have_title(re.compile("FedEx | Express Delivery, Courier & Shipping Services | Netherlands"))
+    expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
     
