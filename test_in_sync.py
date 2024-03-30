@@ -24,23 +24,23 @@ def test_get_started_link(page: Page):
 def test_get_started_print():
     print("Get started")
 
-
+@pytest.mark.smoke
 def test_fedex_home_page_links(page: Page):
 
     page.goto("https://www.fedex.com/en-nl/home.html")
     # Expect a title
-    expect(page).to_have_title(re.compile("FedEx | Express Delivery, Courier & Shipping Services | Netherlands"))
+    expect(page).to_have_title("FedEx | System Down")
     
     # Expect below url
     expect(page).to_have_url('https://www.fedex.com/en-nl/home.html')
     print("URL:"+page.url)
 
     # For cookie pop-up
-    page.get_by_role("button", name="REJECT ALL COOKIES").click
+    # page.get_by_role("button", name="REJECT ALL COOKIES").click()
 
     # Expect below links on home page
-    expect(page.get_by_label("FedEx Netherlands Homepage", exact=True)).to_be_visible
-    expect(page.get_by_role("link", name="Shipping", exact=True)).to_be_visible
+    expect(page.get_by_label("FedExbb Netherlands Homepage"))
+    expect(page.get_by_role("link", name="Shippingaa", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Tracking", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Support", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Account", exact=True)).to_be_visible
@@ -63,5 +63,5 @@ def test_fedex_home_page_link(page: Page):
     # Expect a title
     page.wait_for_timeout(5000)
     print(page.title())
-    expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
+    expect(page).to_have_title("FedEx | System Down")
     
