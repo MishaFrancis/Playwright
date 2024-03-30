@@ -24,7 +24,7 @@ def test_get_started_link(page: Page):
 def test_get_started_print():
     print("Get started")
 
-@pytest.mark.smoke
+
 def test_fedex_home_page_links(page: Page):
 
     page.goto("https://www.fedex.com/en-nl/home.html")
@@ -54,3 +54,12 @@ def test_fedex_home_page_links(page: Page):
     print("***End***")
     page.wait_for_timeout(5000)
     page.close()
+
+
+@pytest.mark.smoke
+def test_fedex_home_page_link(page: Page):
+
+    page.goto("https://www.fedex.com/en-nl/home.html")
+    # Expect a title
+    expect(page).to_have_title(re.compile("FedExqwqwqwqwqw | Express Delivery, Courier & Shipping Services | Netherlands"))
+    
