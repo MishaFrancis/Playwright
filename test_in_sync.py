@@ -40,7 +40,7 @@ def test_fedex_home_page_links(page: Page):
 
     # Expect below links on home page
     expect(page.get_by_label("FedExbb Netherlands Homepage"))
-    expect(page.get_by_role("link", name="Shippingaa", exact=True))
+    expect(page.get_by_text("Shippingaa", exact=True))
     expect(page.get_by_role("link", name="Tracking", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Support", exact=True)).to_be_visible
     expect(page.get_by_role("link", name="Account", exact=True)).to_be_visible
