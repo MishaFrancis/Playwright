@@ -40,7 +40,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest test_example.py -v
+        pytest test_in_sync.py -v
 
   build_3-10:
     needs: build_3-12
@@ -72,5 +72,16 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest test_example.py -v
+        pytest test_in_sync.py -v
       
+  build_check:
+    needs: build_3-12
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+      - name: Build Print
+        run: print("Build check complete")
