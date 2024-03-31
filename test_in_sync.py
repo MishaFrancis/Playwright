@@ -29,14 +29,14 @@ def test_fedex_home_page_links(page: Page):
 
     page.goto("https://www.fedex.com/en-nl/home.html")
     # Expect a title
-    expect(page).to_have_title("FedEx | System Down")
+    expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
     
     # Expect below url
     expect(page).to_have_url('https://www.fedex.com/en-nl/home.html')
     print("URL:"+page.url)
 
     # For cookie pop-up
-    # page.get_by_role("button", name="REJECT ALL COOKIES").click()
+    page.get_by_role("button", name="REJECT ALL COOKIES").click()
 
     # Expect below links on home page
     expect(page.get_by_label("FedExbb Netherlands Homepage"))
@@ -62,6 +62,8 @@ def test_fedex_home_page_link(page: Page):
     page.goto("https://www.fedex.com/en-nl/home.html")
     # Expect a title
     page.wait_for_timeout(5000)
+    page.get_by_role("button", name="REJECT ALL COOKIES").click()
+
     print(page.title())
-    expect(page).to_have_title("FedEx | System Down")
+    expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
     
