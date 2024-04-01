@@ -19,7 +19,11 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m pip install pytest-playwright
+          python -m playwright install          
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run the smoke-checks
         run: |
           pytest test_in_sync.py -v
