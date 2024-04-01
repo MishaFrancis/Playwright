@@ -1,1 +1,1 @@
-print("Test my text")
+python -m pip install --upgrade pip
