@@ -26,8 +26,8 @@ def test_get_started_print():
 
 @pytest.mark.smoke
 def test_fedex_home_page_links(page: Page):
-
     page.goto("https://www.fedex.com/en-nl/home.html")
+
     
     # Expect below url
     expect(page).to_have_url('https://www.fedex.com/en-nl/home.html')
@@ -38,26 +38,28 @@ def test_fedex_home_page_links(page: Page):
     if (reject_button.is_visible()):
         reject_button.click()
         print("In headed mode")
+        # Expect below links on home page
         expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
+        expect(page.get_by_label("FedEx Netherlands Homepage")).to_be_visible()
+        expect(page.get_by_role("link", name="Shipping", exact=True)).to_be_visible()
+        expect(page.get_by_role("link", name="Tracking", exact=True)).to_be_visible()
+        expect(page.get_by_role("link", name="Support", exact=True)).to_be_visible()
+        expect(page.get_by_role("link", name="Account", exact=True)).to_be_visible()
+        expect(page.get_by_role("link", name="Sign in to Fedex.com", exact=True)).to_be_visible()
+        print("All header navigation links are visible on "+ page.url)
+
+        # Tracking section
+        expect(page.get_by_label("", exact=True)).to_be_visible()
+        expect(page.get_by_role("button", name="Click your to track your")).to_be_visible()
+        expect(page.get_by_label("Multiple Tracking Numbers")).to_be_visible()
+        expect(page.get_by_label("Need Help?")).to_be_visible()
+
     else:
         print("In headless mode");
         expect(page).to_have_title("FedEx | System Down")
 
-    # Expect below links on home page
-    expect(page.get_by_label("FedEx Netherlands Homepage"))
-    expect(page.get_by_text("Shipping"))
-    expect(page.get_by_role("link", name="Tracking", exact=True))
-    expect(page.get_by_role("link", name="Support", exact=True))
-    expect(page.get_by_role("link", name="Account", exact=True))
-    expect(page.get_by_role("link", name="Sign in to Fedex.com", exact=True))
-    print("All header navigation links are visible on "+ page.url)
-
-    # Tracking section
-    expect(page.get_by_text("trackingnumber", exact=True))
-    expect(page.get_by_label("Click your to track your package", exact=True))
-    expect(page.get_by_label("Multiple Tracking Numbers", exact=True))
     print("***End***")
-    page.wait_for_timeout(5000)
+    page.wait_for_timeout(2000)
     page.close()
 
 
