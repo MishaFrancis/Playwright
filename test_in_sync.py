@@ -57,8 +57,11 @@ def test_fedex_home_page_links(page: Page):
     else:
         print("In headless mode");
         expect(page).to_have_title("FedEx | System Down")
+        expect(page.get_by_role("link", name="Shipping", exact=True)).to_be_hidden()
+
 
     print("***End***")
+    
     page.wait_for_timeout(2000)
     page.close()
 
