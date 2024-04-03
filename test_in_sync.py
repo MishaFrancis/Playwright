@@ -24,7 +24,6 @@ def test_get_started_link(page: Page):
 def test_get_started_print():
     print("Get started")
 
-@pytest.mark.smoke
 def test_fedex_home_page_links(page: Page):
     page.goto("https://www.fedex.com/en-nl/home.html")
 
@@ -66,23 +65,34 @@ def test_fedex_home_page_links(page: Page):
     page.close()
 
 
+@pytest.mark.smoke
+def test_hema_home_page_countries(page: Page):
 
-def test_fedex_home_page_link(page: Page):
-
-    page.goto("https://www.fedex.com/en-nl/home.html")
+    page.goto("https://corporate.hema.com/en")
     # Expect a title
-    page.wait_for_timeout(5000)
-
-    reject_button = page.get_by_role("button", name="REJECT ALL COOKIES")
-    if (reject_button.is_visible()):
-        reject_button.click()
-        print("In headed mode")
-        expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
-    else:
-        print("In headless mode");
-        expect(page).to_have_title("FedEx | System Down")
-
+    page.wait_for_timeout(2000)
     print(page.title())
+
+    # reject_button = page.get_by_role("button", name="REJECT ALL COOKIES")
+    # if (reject_button.is_visible()):
+    #     reject_button.click()
+    #     print("In headed mode")
+    #     expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
+    # else:
+    #     print("In headless mode");
+    #     expect(page).to_have_title("FedEx | System Down")
+
+    page.get_by_role("link", name="contact").click()
+
+    expect(page.get_by_text("the Netherlands", exact=True)).to_be_visible()
+    expect(page.get_by_text("Belgium")).to_be_visible()
+    expect(page.get_by_text("France")).to_be_visible()
+    expect(page.get_by_text("Austria")).to_be_visible()
+    expect(page.get_by_text("Germany", exact=True)).to_be_visible()
+    expect(page.get_by_text("Luxembourg")).to_be_visible()
+
+    page.wait_for_timeout(2000)
+
     page.close()
 
     
