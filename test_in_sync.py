@@ -95,8 +95,10 @@ def test_hema_home_page_countries(page: Page):
     with check:
         assert page.title() == "contact"
 
+    # Expand "about HEMA" header link
     page.get_by_text("about HEMA").click()
 
+    # Check the links under "about HEMA" header link
     expect(page.get_by_role("link", name="about us")).to_be_visible()
     expect(page.get_by_role("link", name="history")).to_be_visible()
     expect(page.get_by_role("link", name="products")).to_be_visible()
