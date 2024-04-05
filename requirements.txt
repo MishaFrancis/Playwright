@@ -1,0 +1,13 @@
+httpx
+psycogreen
+psycopg2-binary
+pytest
+pytest-check
+pytest-html
+python-dotenv
+jsonschema
+pytz
+pytest-xdist
+bs4
+ipykernel
+xdist
