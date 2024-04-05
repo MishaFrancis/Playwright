@@ -73,15 +73,6 @@ def test_hema_home_page_countries(page: Page):
     page.wait_for_timeout(2000)
     print(page.title())
 
-    # reject_button = page.get_by_role("button", name="REJECT ALL COOKIES")
-    # if (reject_button.is_visible()):
-    #     reject_button.click()
-    #     print("In headed mode")
-    #     expect(page).to_have_title("FedEx | Express Delivery, Courier & Shipping Services | Netherlands")
-    # else:
-    #     print("In headless mode");
-    #     expect(page).to_have_title("FedEx | System Down")
-
     page.get_by_role("link", name="contact").click()
 
     expect(page.get_by_text("the Netherlands", exact=True)).to_be_visible()
