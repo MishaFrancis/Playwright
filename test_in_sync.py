@@ -74,8 +74,16 @@ def test_hema_home_page_countries(page: Page):
     page.wait_for_timeout(2000)
     print(page.title())
 
+    # Chek home page header links
+    expect(page.get_by_text("about HEMA")).to_be_visible()
+    expect(page.get_by_text("news & press")).to_be_visible()
+    expect(page.get_by_role("link", name="working at HEMA")).to_be_visible()
+    expect(page.get_by_role("link", name="contact")).to_be_visible()
+
+    # Navigate to contact page
     page.get_by_role("link", name="contact").click()
 
+    # Chek contact page countries
     expect(page.get_by_text("the Netherlands", exact=True)).to_be_visible()
     expect(page.get_by_text("Belgium")).to_be_visible()
     expect(page.get_by_text("France")).to_be_visible()
@@ -83,9 +91,17 @@ def test_hema_home_page_countries(page: Page):
     expect(page.get_by_text("Germany", exact=True)).to_be_visible()
     expect(page.get_by_text("Luxembourg")).to_be_visible()
 
-    # This is a soft assert in Python. If it fails, still the remaining part of the test will continue and complete.
+    # This is a soft assert in Python. If it fails, stil the remaining part of the test will continue and complete.
     with check:
         assert page.title() == "contact"
+
+    page.get_by_text("about HEMA").click()
+
+    expect(page.get_by_role("link", name="about us")).to_be_visible()
+    expect(page.get_by_role("link", name="history")).to_be_visible()
+    expect(page.get_by_role("link", name="products")).to_be_visible()
+    expect(page.get_by_role("link", name="organisation")).to_be_visible()
+    expect(page.get_by_role("link", name="sustainability & CSR")).to_be_visible()
     
     print("Test point")
 
