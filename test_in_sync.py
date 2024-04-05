@@ -1,6 +1,7 @@
 import re
 import pytest
 from playwright.sync_api import Page, expect, Playwright, sync_playwright
+from pytest_check import check
 
 def test_has_title(page: Page):
     
@@ -81,6 +82,12 @@ def test_hema_home_page_countries(page: Page):
     expect(page.get_by_text("Austria")).to_be_visible()
     expect(page.get_by_text("Germany", exact=True)).to_be_visible()
     expect(page.get_by_text("Luxembourg")).to_be_visible()
+
+    # This is a soft assert in Python. If it fails, still the remaining part of the test will continue and complete.
+    with check:
+        assert page.title() == "contact"
+    
+    print("Test point")
 
     page.wait_for_timeout(2000)
 
