@@ -32,6 +32,7 @@ jobs:
         python -m pip install playwright
         python -m pip install pytest-playwright
         python -m playwright install
+        python -m pip install pytest-check
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
