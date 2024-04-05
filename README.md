@@ -25,6 +25,9 @@ pip install pytest-playwright playwright -U
 
 # Playwright - How to run tests
 
+## To run the dependencies mentioned in requirements.txt
+pip install -r requirements.txt
+
 ## Run Pytest:
 pytest --headed
 
