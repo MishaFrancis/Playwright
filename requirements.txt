@@ -11,3 +11,4 @@ pytest-xdist
 bs4
 ipykernel
 xdist
+requests
