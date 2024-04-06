@@ -36,6 +36,7 @@ jobs:
 
 
   API_checks:
+      needs: playwright
       name: 'API - Smoke Check'
       runs-on: ubuntu-latest
       container:
