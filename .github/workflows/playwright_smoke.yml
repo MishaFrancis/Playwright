@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
   schedule:
   - cron: "0 0 * * *"  
+
 jobs:
   playwright:
     name: 'Playwright Tests - Smoke Check'
@@ -30,6 +31,28 @@ jobs:
       - name: Run the smoke-checks
         run: |
           pytest test_in_sync.py -v
-          pytest test_apis.py -v
         env:
           HOME: /root
+
+
+  API_checks:
+      name: 'API - Smoke Check'
+      runs-on: ubuntu-latest
+      container:
+        image: mcr.microsoft.com/playwright/python:v1.42.0-jammy
+      steps:
+        - uses: actions/checkout@v4
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.12'
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        - name: Run the smoke-checks
+          run: |
+            pytest test_apis.py -v
+          env:
+            HOME: /root
+          
