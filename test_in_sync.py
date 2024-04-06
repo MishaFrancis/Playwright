@@ -66,7 +66,6 @@ def test_fedex_home_page_links(page: Page):
     page.close()
 
 
-@pytest.mark.smoke
 def test_hema_home_page_countries(page: Page):
 
     page.goto("https://corporate.hema.com/en")
@@ -110,5 +109,6 @@ def test_hema_home_page_countries(page: Page):
     page.wait_for_timeout(2000)
 
     page.close()
+ 
 
     

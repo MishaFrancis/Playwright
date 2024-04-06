@@ -30,5 +30,6 @@ jobs:
       - name: Run the smoke-checks
         run: |
           pytest test_in_sync.py -v
+          pytest test_apis.py -v
         env:
           HOME: /root
