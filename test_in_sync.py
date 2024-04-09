@@ -112,3 +112,16 @@ def test_hema_home_page_countries(page: Page):
  
 
     
+def test_run(playwright: Playwright) -> None:
+    browser = playwright.chromium.launch()
+    context = browser.new_context()
+    page = context.new_page()
+    page.goto("https://www.cassini-technologies.com/")
+    expect(page.get_by_role("heading", name="Redefining ophthalmic")).to_be_visible
+    expect(page.get_by_text("Discover the future of vision")).to_be_visible
+    expect(page.get_by_role("link", name="Request a Demo")).to_be_visible
+    page.wait_for_timeout(1000)
+
+    # ---------------------
+    context.close()
+    browser.close()
