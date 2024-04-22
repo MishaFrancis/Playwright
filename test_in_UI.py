@@ -1,17 +1,28 @@
 import re
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Playwright, sync_playwright, expect
 
-def test_has_title(page: Page):
-    page.goto("https://playwright.dev/")
 
-    # Expect a title "to contain" a substring.
-    expect(page).to_have_title(re.compile("Playwright"))
+def test_milk_run(playwright: Playwright) -> None:
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context()
+    page = context.new_page()
+    page.goto("https://www.dirk.nl/")
+    page.wait_for_load_state()
+    page.get_by_placeholder("Ik zoek...").fill("melk")
+    page.get_by_placeholder("Ik zoek...").press("Enter")
+    page.get_by_role("img", name="de Beste Volle melk").click()
+    expect(page.get_by_role("heading", name="de Beste Volle melk")).to_be_visible()
+    page.get_by_role("heading", name="de Beste Volle melk").highlight()
+    page.get_by_placeholder("Ik zoek...").fill("melk")
+    page.get_by_placeholder("Ik zoek...").press("Enter")
+    expect(page.get_by_role("link", name="de Beste Volle melk")).to_be_visible()
+    expect(page.locator("article").filter(has_text="193Melkunie Halfvolle melk1,5").get_by_role("link")).to_be_visible()
+    expect(page.get_by_role("link", name="Bio+ Biologische halfvolle")).to_be_visible()
 
-def test_get_started_link(page: Page):
-    page.goto("https://playwright.dev/")
+    # ---------------------
+    context.close()
+    browser.close()
 
-    # Click the get started link.
-    page.get_by_role("link", name="Get started").click()
 
-    # Expects page to have a heading with the name of Installation.
-    expect(page.get_by_role("heading", name="Installation")).to_be_visible()
+# with sync_playwright() as playwright:
+#     test_milk_run(playwright)
