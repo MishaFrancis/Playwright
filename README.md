@@ -42,3 +42,9 @@ pytest -m smoke --html=reports.html
 
 ## Run tests in parallel
 pytest test_example.py -v --html=reports.html --disable-warnings --numprocesses 6
+
+# Playwright - Debug
+playwright show-trace
+
+# Playwright - Code Recording & debug
+playwright codegen <WebSite>
