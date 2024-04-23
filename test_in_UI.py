@@ -45,9 +45,6 @@ def test_milk_run(playwright: Playwright) -> None:
     context.close()
     browser.close()
 
-    def pytest_html_report_title(report):
-        report.title = "My very own title!"
-
 
 # with sync_playwright() as playwright:
 #     test_milk_run(playwright)
