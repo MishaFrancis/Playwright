@@ -37,8 +37,11 @@ pytest test_login.py
 ## Run specific tests with html reports:
 pytest test_login.py --html=reports.html
 
-## Run tests & save run traces
+## Run tests & save run traces:
 pytest test_in_sync.py --headed --tracing on
+
+## Show saved traces:
+playwright show-trace
 
 ## Run specific tests which are marked with tags & with html reports:
 pytest -m smoke --html=reports.html
