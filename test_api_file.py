@@ -1,8 +1,4 @@
 import requests
-import json
-import pytest
-from typing import Generator
-from playwright.sync_api import Playwright, APIRequestContext
 from search_api import save_multiple_keys
 
 
