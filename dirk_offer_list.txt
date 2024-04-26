@@ -1,0 +1,744 @@
+headerText
+Hollandse witte asperges
+
+normalPrice
+4.99
+
+offerPrice
+3.89
+
+packaging
+Per zak. OP=OP
+
+normalPrice
+4.99
+
+offerPrice
+3.89
+
+headerText
+Witte asperges verpakt
+
+packaging
+500 g
+
+headerText
+Hak groente of appelmoes
+
+normalPrice
+3.15
+
+offerPrice
+0.99
+
+packaging
+Pot 330 - 370 gram (m.u.v. haricot verts).
+
+normalPrice
+1.85
+
+offerPrice
+0.99
+
+headerText
+Hak Rode bieten schijven
+
+packaging
+355 g
+
+normalPrice
+2.15
+
+offerPrice
+0.99
+
+headerText
+Hak Rode kool met stukjes appel
+
+packaging
+355 g
+
+normalPrice
+1.69
+
+offerPrice
+0.99
+
+headerText
+Hak Sperziebonen fijn gebroken
+
+packaging
+340 g
+
+normalPrice
+1.64
+
+offerPrice
+0.99
+
+headerText
+Hak Appelmoes extra kwaliteit
+
+packaging
+355 g
+
+normalPrice
+1.79
+
+offerPrice
+0.99
+
+headerText
+Hak Hollandse bruine bonen
+
+packaging
+370 g
+
+normalPrice
+1.79
+
+offerPrice
+0.99
+
+headerText
+Hak Doperwtjes met worteltjes extra fijn
+
+packaging
+350 g
+
+normalPrice
+2.35
+
+offerPrice
+0.99
+
+headerText
+Hak Witte bonen in tomatensaus
+
+packaging
+360 g
+
+normalPrice
+2.15
+
+offerPrice
+0.99
+
+headerText
+Hak Doperwten extra fijn
+
+packaging
+350 g
+
+normalPrice
+3.15
+
+offerPrice
+0.99
+
+headerText
+Hak Haricots verts extra fijn
+
+packaging
+340 g
+
+normalPrice
+1.89
+
+offerPrice
+0.99
+
+headerText
+Hak Rabarbercompote
+
+packaging
+360 g
+
+normalPrice
+2.29
+
+offerPrice
+0.99
+
+headerText
+Hak Malse veldertjes
+
+packaging
+355 g
+
+normalPrice
+2.35
+
+offerPrice
+0.99
+
+headerText
+Hak Rode bieten sticks zoetzuur
+
+packaging
+355 g
+
+normalPrice
+1.59
+
+offerPrice
+0.99
+
+headerText
+Hak Rode kool met stukjes peer en kaneel
+
+packaging
+355 g
+
+normalPrice
+2.15
+
+offerPrice
+0.99
+
+headerText
+Hak Appelmoes met een vleugje kaneel
+
+packaging
+360 g
+
+normalPrice
+1.99
+
+offerPrice
+0.99
+
+headerText
+Hak Gesneden bonen
+
+packaging
+340 g
+
+normalPrice
+2.29
+
+offerPrice
+0.99
+
+headerText
+Hak Spinazie
+
+packaging
+330 g
+
+normalPrice
+2.45
+
+offerPrice
+0.99
+
+headerText
+Hak Spinazie met room
+
+packaging
+345 g
+
+normalPrice
+1.99
+
+offerPrice
+0.99
+
+headerText
+Hak Rode kool
+
+packaging
+355 g
+
+normalPrice
+1.89
+
+offerPrice
+0.99
+
+headerText
+Hak Kapucijners
+
+packaging
+365 g
+
+headerText
+Avocado
+
+normalPrice
+1.19
+
+offerPrice
+0.89
+
+packaging
+Per stuk.
+
+headerText
+Hollandse aubergine 
+
+normalPrice
+0.85
+
+offerPrice
+0.69
+
+packaging
+Per stuk.
+
+normalPrice
+0.85
+
+offerPrice
+0.69
+
+headerText
+Aubergine
+
+packaging
+Per stuk
+
+headerText
+1 de Beste Blauwe bessen
+
+normalPrice
+3.79
+
+offerPrice
+2.49
+
+packaging
+Per bak.
+
+headerText
+1 de Beste Citroenen
+
+normalPrice
+0.99
+
+offerPrice
+0.89
+
+packaging
+Per net.
+
+normalPrice
+0.99
+
+offerPrice
+0.89
+
+headerText
+1 de Beste Citroenen verpakt
+
+packaging
+500 g
+
+headerText
+1 de Beste Pitloze witte druiven
+
+normalPrice
+2.49
+
+offerPrice
+1.49
+
+packaging
+Per bak.
+
+normalPrice
+1.99
+
+offerPrice
+1.49
+
+headerText
+1 de Beste Pitloze witte druiven
+
+packaging
+500 g
+
+headerText
+1 de Beste Roerbakgroente 
+
+normalPrice
+1.99
+
+offerPrice
+1.49
+
+packaging
+Zak 400 gram.
+
+normalPrice
+1.99
+
+offerPrice
+1.49
+
+headerText
+1 de Beste Roerbakgroente Chinese stijl
+
+packaging
+400 g
+
+normalPrice
+1.99
+
+offerPrice
+1.49
+
+headerText
+1 de Beste Italiaanse roerbakgroente
+
+packaging
+400 g
+
+headerText
+Broccoli
+
+normalPrice
+1.49
+
+offerPrice
+0.99
+
+packaging
+Los.
+
+normalPrice
+2.98
+
+offerPrice
+1.98
+
+headerText
+Broccoli los
+
+packaging
+1 kg (ca. 2 stuks)
+
+headerText
+Snijbonen
+
+normalPrice
+1.89
+
+offerPrice
+1.49
+
+packaging
+Zak 400 gram.
+
+headerText
+1 de Beste Blauwe bessen
+
+normalPrice
+3.49
+
+offerPrice
+2.49
+
+packaging
+Per bak.
+
+headerText
+1 de Beste Hollandse aardbeien
+
+normalPrice
+0
+
+offerPrice
+2.49
+
+packaging
+Per schaal. OP=OP
+
+normalPrice
+2.99
+
+offerPrice
+0
+
+headerText
+1 de Beste Hollandse aardbeien
+
+packaging
+400 g
+
+headerText
+1 de Beste Hollandse radijs
+
+normalPrice
+0.89
+
+offerPrice
+0.69
+
+packaging
+Per bos.
+
+normalPrice
+0.89
+
+offerPrice
+0
+
+headerText
+1 de Beste Radijs
+
+packaging
+Per bos
+
+headerText
+1 de Beste Ijsbergsla
+
+normalPrice
+1.19
+
+offerPrice
+0.89
+
+packaging
+Zak 200 gram.
+
+normalPrice
+0.99
+
+offerPrice
+0
+
+headerText
+1 de Beste IJsbergsla naturel
+
+packaging
+200 g
+
+normalPrice
+1.19
+
+offerPrice
+0
+
+headerText
+1 de Beste Ijsbergsla melange
+
+packaging
+200 g
+
+headerText
+1 de Beste Pitloze rode druiven
+
+normalPrice
+1.99
+
+offerPrice
+1.89
+
+packaging
+Per 500 gram.
+
+normalPrice
+1.99
+
+offerPrice
+0
+
+headerText
+1 de Beste Pitloze rode druiven
+
+packaging
+500 g
+
+headerText
+Biologische vastkokende aardappelen
+
+normalPrice
+3.29
+
+offerPrice
+2.99
+
+packaging
+Per zak.
+
+normalPrice
+3.29
+
+offerPrice
+0
+
+headerText
+Bio+ Biologische aardappelen vastkokend
+
+packaging
+2 kg
+
+headerText
+Sperziebonen
+
+normalPrice
+3.98
+
+offerPrice
+1.49
+
+packaging
+Los.
+
+normalPrice
+3.98
+
+offerPrice
+0
+
+headerText
+Sperziebonen
+
+packaging
+1 kg
+
+headerText
+Perssinaasappelen
+
+normalPrice
+2.49
+
+offerPrice
+1.99
+
+packaging
+Per net.
+
+normalPrice
+2.49
+
+offerPrice
+2.49
+
+headerText
+1 de Beste Perssinaasappelen verpakt
+
+packaging
+2 kg
+
+headerText
+Rode snoeptomaten
+
+normalPrice
+2.99
+
+offerPrice
+1.89
+
+packaging
+Per bak.
+
+normalPrice
+2.99
+
+offerPrice
+0
+
+headerText
+1 de Beste Snoeptomaatjes 500 gram
+
+packaging
+Per schaal
+
+headerText
+Royal Gala appelen
+
+normalPrice
+0
+
+offerPrice
+2.49
+
+packaging
+Per zak. OP=OP
+
+headerText
+Boon peulvruchten
+
+normalPrice
+2.76
+
+offerPrice
+0.99
+
+packaging
+Pak 380 gram.
+
+normalPrice
+2.59
+
+offerPrice
+0
+
+headerText
+Boon Bruine bonen in stoof
+
+packaging
+380 g
+
+normalPrice
+2.69
+
+offerPrice
+0
+
+headerText
+Boon Kikkererwten in curry
+
+packaging
+380 g
+
+normalPrice
+2.69
+
+offerPrice
+0
+
+headerText
+Boon Limabonen in roti saus
+
+packaging
+380 g
+
+normalPrice
+2.69
+
+offerPrice
+0
+
+headerText
+Boon Witte bonen in piri-piri saus
+
+packaging
+380 g
+
+normalPrice
+2.69
+
+offerPrice
+0
+
+headerText
+Boon Linzen in tomatensaus
+
+packaging
+380 g
+
+normalPrice
+2.76
+
+offerPrice
+0
+
+headerText
+Boon Zwarte bonen in teriyaki saus
+
+packaging
+380 g
+

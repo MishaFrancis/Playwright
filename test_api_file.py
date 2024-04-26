@@ -3,10 +3,11 @@ import json
 import pytest
 from typing import Generator
 from playwright.sync_api import Playwright, APIRequestContext
-from search_api import search_multiple_values
+from search_api import save_multiple_keys
 
 
 def test_apis_get():
+    ## This script in fetching the Dirk offer API and saves it in the dirk_offer_list.txt file
     url = "https://www.dirk.nl/api/offers/1"
 
     headers = {
@@ -16,9 +17,13 @@ def test_apis_get():
     res = response.json()
     # print(json.dumps(res, indent=4))
 
-    keys_to_search = ['productId', 'offerPrice','normalPrice']
-    found_values = search_multiple_values(res, keys_to_search)
+    # List of keys to save
+    keys_to_save = ["headerText", "normalPrice", "offerPrice", "packaging"]
 
-    # Output the found values
-    for key, value in found_values.items():
-        print(f"Key: {key}, Value: {value}")
+    # Call the function to save the specified keys
+    save_multiple_keys(res, keys_to_save)
+
+  
+
+
+

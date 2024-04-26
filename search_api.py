@@ -1,28 +1,36 @@
-def search_multiple_values(data, keys_to_search):
-    found_values = {}
-    def search(data, key_to_search):
-        # Check if the data is a dictionary
+def save_multiple_keys(data, keys_to_save):
+    saved_values = {}
+    file_path = "dirk_offer_list.txt"
+    with open(file_path, 'w') as file:  ## This is just to clear the file
+        pass
+    
+    def search_and_collect(data, keys_to_save):
+        # If the data is a dictionary
         if isinstance(data, dict):
-            # If the key is in the dictionary, return the associated value
-            if key_to_search in data:
-                return data[key_to_search]
-            # Otherwise, recursively search the values in the dictionary
+            # Check each key in the dictionary
+            for key in keys_to_save:
+                # If the key is in the dictionary, save the value
+                if key in data:
+                    saved_values[key] = data[key]
+                    print(f"{key}",data[key])
+                    text = key
+                    file_path = "dirk_offer_list.txt"    
+                    file = open(file_path, 'a')
+                    file.write(text+'\n')
+                    file.write(str(data[key]))
+                    file.write('\n\n')
+                    file.close()                    
+            # Recursively search the values in the dictionary
             for value in data.values():
-                result = search(value, key_to_search)
-                if result is not None:
-                    return result
-        # Check if the data is a list
+                search_and_collect(value, keys_to_save)
+            print("        ")
+        # If the data is a list
         elif isinstance(data, list):
-            # Loop through each item in the list and recursively search
+            # Recursively search each item in the list
             for item in data:
-                result = search(item, key_to_search)
-                if result is not None:
-                    return result
-        # Return None if the key was not found
-        return None
-    
-    # Search for each key in the keys_to_search list
-    for key in keys_to_search:
-        found_values[key] = search(data, key)
-    
-    return found_values
+                search_and_collect(item, keys_to_save)
+
+    # Start the search and collection process
+    search_and_collect(data, keys_to_save)
+
+    return saved_values
