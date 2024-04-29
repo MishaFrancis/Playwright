@@ -34,3 +34,8 @@ def save_multiple_keys(data, keys_to_save):
     search_and_collect(data, keys_to_save)
 
     return saved_values
+
+
+def calcs(calc):
+    square = calc * calc
+    return square

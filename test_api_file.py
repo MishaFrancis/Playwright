@@ -1,5 +1,6 @@
+import random
 import requests
-from search_api import save_multiple_keys
+import Helpers
 
 
 def test_apis_get():
@@ -17,9 +18,10 @@ def test_apis_get():
     keys_to_save = ["headerText", "normalPrice", "offerPrice", "packaging"]
 
     # Call the function to save the specified keys
-    save_multiple_keys(res, keys_to_save)
-
-  
+    Helpers.save_multiple_keys(res, keys_to_save)
 
 
+def test_functions():
+    a = Helpers.calcs(5.5)
+    print(a)
 

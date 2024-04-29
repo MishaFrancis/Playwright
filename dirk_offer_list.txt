@@ -1,28 +1,4 @@
 headerText
-Hollandse witte asperges
-
-normalPrice
-4.99
-
-offerPrice
-3.89
-
-packaging
-Per zak. OP=OP
-
-normalPrice
-4.99
-
-offerPrice
-3.89
-
-headerText
-Witte asperges verpakt
-
-packaging
-500 g
-
-headerText
 Hak groente of appelmoes
 
 normalPrice
@@ -310,6 +286,18 @@ offerPrice
 packaging
 Per bak.
 
+normalPrice
+3.49
+
+offerPrice
+2.49
+
+headerText
+1 de Beste Blauwe bessen
+
+packaging
+300 g
+
 headerText
 1 de Beste Citroenen
 
@@ -441,6 +429,18 @@ offerPrice
 
 packaging
 Per bak.
+
+normalPrice
+3.49
+
+offerPrice
+2.49
+
+headerText
+1 de Beste Blauwe bessen
+
+packaging
+300 g
 
 headerText
 1 de Beste Hollandse aardbeien
@@ -658,6 +658,18 @@ offerPrice
 packaging
 Per zak. OP=OP
 
+normalPrice
+2.49
+
+offerPrice
+0
+
+headerText
+1 de Beste Royal gala
+
+packaging
+1,5 kg
+
 headerText
 Boon peulvruchten
 
@@ -731,7 +743,7 @@ packaging
 380 g
 
 normalPrice
-2.76
+2.69
 
 offerPrice
 0
