@@ -20,6 +20,7 @@ def test_get_started_link(page: Page):
 
     # Expects page to have a heading with the name of Installation.
     expect(page.get_by_role("heading", name="Installation")).to_be_visible()
+    expect(page).to_have_url(re.compile(".*intro"))
 
 
 def test_get_started_print():
@@ -112,8 +113,8 @@ def test_hema_home_page_countries(page: Page):
  
 
     
-def test_run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch()
+def test_run_cassini_home_page(playwright: Playwright) -> None:
+    browser = playwright.chromium.launch(headless=True, slow_mo=200)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://www.cassini-technologies.com/")

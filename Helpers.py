@@ -13,11 +13,19 @@ def save_multiple_keys(data, keys_to_save):
                 if key in data:
                     saved_values[key] = data[key]
                     print(f"{key}",data[key])
+                    if key == ('normalPrice'):
+                        n = data[key]
+                    elif (key == 'offerPrice' and data[key] != 0):
+                        o = data[key]
+                        pro = n - o
+                        rounded_number = round(pro, 2)
+                        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Profit : ", rounded_number)
                     text = key
                     file_path = "dirk_offer_list.txt"    
                     file = open(file_path, 'a')
                     file.write(text+'\n')
                     file.write(str(data[key]))
+                    file.write('\n')
                     file.write('\n\n')
                     file.close()                    
             # Recursively search the values in the dictionary
