@@ -47,3 +47,7 @@ def save_multiple_keys(data, keys_to_save):
 def calcs(calc):
     square = calc * calc
     return square
+
+
+def cartempty():
+    return

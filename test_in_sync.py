@@ -126,3 +126,74 @@ def test_run_cassini_home_page(playwright: Playwright) -> None:
     # ---------------------
     context.close()
     browser.close()
+
+
+@pytest.mark.smoke
+def test_shopping_order_confirmation_for_Next_Day_Air(page: Page):
+
+    # Open page
+    page.goto("https://demowebshop.tricentis.com/")
+
+    # Expect the page title
+    print(page.title())
+    expect(page).to_have_title("Demo Web Shop")
+    
+    ## Login section
+    page.get_by_role("link", name="Log in").click()
+    page.get_by_label("Email:").fill("mishafrancis@gmail.com")
+    page.get_by_label("Password:").fill("Test1234$")
+    page.get_by_role("button", name="Log in").click()
+
+    ## Select products from list to shopping cart
+
+    # Item 1
+    page.get_by_role("link", name="Apparel & Shoes").first.click()
+    page.get_by_role("button", name="Add to cart").nth(2).click()
+    # Item 2
+    page.get_by_role("link", name="Books").first.click()
+    page.get_by_role("button", name="Add to cart").nth(1).click()
+
+    ## Shopping cart
+    page.get_by_role("link", name="Shopping cart (2)").click()
+    expect(page.get_by_role("heading", name="Shopping cart")).to_be_visible
+
+    ## Navigate to checkout
+    page.locator("#termsofservice").check()
+    page.get_by_role("button", name="Checkout").click()
+    page.get_by_role("button", name="Continue").click()
+    page.wait_for_timeout(500)
+    page.get_by_role("button", name="Continue").click()
+    page.wait_for_timeout(500)
+    # Select shipping type - 'Next Day Air'
+    page.get_by_label("Next Day Air (40.00)").check()
+    page.wait_for_timeout(500)
+    page.get_by_role("button", name="Continue").click()
+    page.wait_for_timeout(500)
+    page.get_by_role("button", name="Continue").click()
+    page.wait_for_timeout(500)
+    page.get_by_role("button", name="Continue").click()
+    page.wait_for_timeout(500)
+
+    ## validate confirmation page
+    expect(page.get_by_role("cell", name="Sub-Total:")).to_be_visible
+    expect(page.get_by_role("cell", name="11.00")).to_be_visible
+    expect(page.get_by_role("cell", name="Shipping: (Next Day Air)")).to_be_visible
+    expect(page.get_by_role("cell", name="40.00")).to_be_visible
+    expect(page.get_by_role("cell", name="Payment method additional fee:")).to_be_visible
+    expect(page.get_by_role("cell", name="7.00")).to_be_visible
+    expect(page.get_by_role("cell", name="Tax:")).to_be_visible
+    expect(page.get_by_role("cell", name="0.00", exact=True)).to_be_visible
+    expect(page.get_by_role("cell", name="Total:", exact=True)).to_be_visible
+    expect(page.get_by_role("cell", name="58.00")).to_be_visible
+
+    ## Validate Order message
+    page.get_by_role("button", name="Confirm").click()
+    expect(page.get_by_role("heading", name="Thank you")).to_be_visible
+    expect(page.get_by_text("Your order has been")).to_be_visible
+    expect(page.get_by_text("Order number:")).to_be_visible
+
+    ## Logout & close
+    page.get_by_role("link", name="Log out").click()
+    page.close()
+
+
