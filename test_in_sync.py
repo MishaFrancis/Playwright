@@ -194,7 +194,7 @@ def test_shopping_order_confirmation_for_Next_Day_Air(page: Page):
 
     ## Logout & close
     page.get_by_role("link", name="Log out").click()
-    page.screenshot(path = "order.jpg", full_page=True)
+    page.screenshot(path = "order.jpg", full_page=False)
     page.close()
 
 
