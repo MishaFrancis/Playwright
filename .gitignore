@@ -3,3 +3,4 @@ playwright.exe
 pytest.exe
 /test-results
 __pycache__
+order.jpg
