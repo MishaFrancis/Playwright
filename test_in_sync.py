@@ -154,10 +154,11 @@ def test_shopping_order_confirmation_for_Next_Day_Air(page: Page):
     page.get_by_role("button", name="Add to cart").nth(1).click()
 
     ## Shopping cart
-    page.get_by_role("link", name="Shopping cart (2)").click()
+    page.locator("xpath=/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[3]/a").click()
     expect(page.get_by_role("heading", name="Shopping cart")).to_be_visible
 
     ## Navigate to checkout
+    page.wait_for_timeout(500)
     page.locator("#termsofservice").check()
     page.get_by_role("button", name="Checkout").click()
     page.get_by_role("button", name="Continue").click()
@@ -165,7 +166,7 @@ def test_shopping_order_confirmation_for_Next_Day_Air(page: Page):
     page.get_by_role("button", name="Continue").click()
     page.wait_for_timeout(500)
     # Select shipping type - 'Next Day Air'
-    page.get_by_label("Next Day Air (40.00)").check()
+    page.get_by_label("Next Day Air (40.00)").click()
     page.wait_for_timeout(500)
     page.get_by_role("button", name="Continue").click()
     page.wait_for_timeout(500)
