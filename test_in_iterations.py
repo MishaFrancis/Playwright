@@ -1,5 +1,4 @@
-from playwright.sync_api import sync_playwright, expect,Playwright
-import re
+from playwright.sync_api import expect,Playwright
 
 class Person:
     def __init__(self, name, password):
