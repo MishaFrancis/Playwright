@@ -19,10 +19,12 @@ def test_Orange_HRM_Login_Page_Error(playwright: Playwright) -> None:
         ## Open URL
         page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
-        ## Enter details on login page
+        ## Enter details on login page (Positive & Negative)
         page.wait_for_selector('//input[@name="username"]').fill(person.name)
         page.wait_for_selector('//input[@name="password"]').fill(person.password)
         page.wait_for_selector('//button[@type="submit"]').click()
+
+        ## Validation
         if person.name == "Admin":
            expect(page.get_by_text("Time at Work")).to_be_visible()
         else:
