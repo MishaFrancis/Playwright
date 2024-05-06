@@ -10,7 +10,7 @@ from playwright.sync_api import expect,Playwright
         ("Charlie", "Test1234$","Negativecase"),
     ],
     # Custom IDs for each test case
-    ids=["Positive-case", "Negative-case", "Negative-case"]
+    ids=["Positive-case_", "Negative-case_", "Negative-case_"]
 )
 
 def test_Orange_HRM_Login_Page_Error(playwright: Playwright,username, password,casetype) -> None:
