@@ -26,7 +26,7 @@ def test_Orange_HRM_Login_Page_Error(playwright: Playwright) -> None:
 
         ## Validation
         if person.name == "Admin":
-           expect(page.get_by_text("Time at Work")).to_be_visible()
+           expect(page.get_by_text("Buzz Latest Posts")).to_be_visible()
         else:
            expect(page.get_by_text("Invalid credentials")).to_be_visible()
         print(person.name)
