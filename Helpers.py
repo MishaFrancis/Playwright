@@ -49,5 +49,10 @@ def calcs(calc):
     return square
 
 
-def cartempty():
-    return
+def reverse(word):
+    rev = ""
+    for char in reversed(word):
+
+        rev += char
+
+    return rev
