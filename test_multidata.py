@@ -30,7 +30,7 @@ def test_Orange_HRM_Login_Page_Error(playwright: Playwright,username, password,c
            expect(page.get_by_text("Buzz Latest Posts")).to_be_visible()
         else:
            expect(page.get_by_text("Invalid credentials")).to_be_visible()
-        print(username)
+        print(username,end=" ")   ## This is to avoid the newline
         print(password)
         print(casetype)
 
