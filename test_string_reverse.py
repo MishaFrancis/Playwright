@@ -2,7 +2,6 @@ import Helpers
 
 def test_string_reverse():
 
-    text = "Hi, there. How are you ?"
+    text = "Misha"
 
-    print(Helpers.reverse(Helpers.reverse(text)))
-
+    print(Helpers.reverse(text))

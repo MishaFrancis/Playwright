@@ -51,8 +51,7 @@ def calcs(calc):
 
 def reverse(word):
     rev = ""
-    for char in reversed(word):
-
-        rev += char
+    for char in word:
+        rev = char + rev
 
     return rev
