@@ -71,7 +71,7 @@ def test_hema_home_page_countries(page: Page):
 
     page.goto("https://corporate.hema.com/en")
     # Expect a title
-    page.wait_for_timeout(2000)
+    page.wait_for_timeout(4000)
     print(page.title())
 
     # Chek home page header links
