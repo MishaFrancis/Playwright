@@ -101,9 +101,9 @@ def test_hema_home_page_countries(page: Page):
     # Check the links under "about HEMA" header link
     expect(page.get_by_role("link", name="about us")).to_be_visible()
     expect(page.get_by_role("link", name="history")).to_be_visible()
-    expect(page.get_by_role("link", name="products")).to_be_visible()
-    expect(page.get_by_role("link", name="organisation")).to_be_visible()
-    expect(page.get_by_role("link", name="sustainability & CSR")).to_be_visible()
+    expect(page.get_by_role("link", name="environment")).to_be_visible()
+    expect(page.get_by_role("link", name="people and society")).to_be_visible()
+    expect(page.get_by_role("link", name="for suppliers")).to_be_visible()
     
     print("Test point")
 
