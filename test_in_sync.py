@@ -66,7 +66,7 @@ def test_fedex_home_page_links(page: Page):
     page.wait_for_timeout(2000)
     page.close()
 
-@pytest.mark.skip(reason="Skipping this test since its failing in headless mode. URL not working")
+@pytest.mark.skip(reason="Skipping this test since its failing in headless mode. URL not working.")
 def test_hema_home_page_countries(page: Page):
 
     page.goto("https://corporate.hema.com/en")
